@@ -149,7 +149,7 @@ if(isset($_GET['action']) && !empty($_GET['nom_cli']) && !empty($_GET['prenom_cl
      
 if(isset($_GET['action']) && !empty($_GET['immatriculation']) && !empty($_GET['marque_vehicule'])){
 
-$ajouter = $db->prepare('INSERT INTO vehicule (immatriculation_voiture, marque_vehicule) VALUES (:plaque,:marque)');
+$ajouter = $db->prepare('INSERT INTO vehicule (immatriculation_voiture, marque_vehicule,vehicule_dispo) VALUES (:plaque,:marque,1)');
 $ajouter->bindParam(':plaque', $_GET['immatriculation'], 
 PDO::PARAM_STR);
 $ajouter->bindParam(':marque', $_GET['marque_vehicule'],
@@ -235,21 +235,21 @@ $estceok= $ajouter->execute();
 <h1>louer</h1>
 <form method='GET'>
         <input type="number" name="id" placeholder="id_client">
-        <input type="number" name="id" placeholder="id_vahicule">
+        <input type="number" name="idd" placeholder="id_vahicule">
         <input type="date" name="dateone">
         <input type="date" name="datetwo">
         <button type="submit" value="ajouter" name="action">ajouter</button>
        
     </form>
-
+<h1>voiture dispo</h1>
 <?php
 
-if(isset($_GET['action']) && !empty($_GET['id']) && !empty($_GET['id'])  && !empty($_GET['dateone'])  && !empty($_GET['datetwo'])){
+if(isset($_GET['action']) && !empty($_GET['id']) && !empty($_GET['idd'])  && !empty($_GET['dateone'])  && !empty($_GET['datetwo'])){
 
-    $ajouter = $db->prepare('INSERT INTO louer (id_client,id_vehicule,date_debut,date_defin) VALUES (:id,:id,:dateun,:dated)');
+    $ajouter = $db->prepare('INSERT INTO louer (id_client,id_vehicule,date_debut,date_defin) VALUES (:id,:iddd,:dateun,:dated)');
     $ajouter->bindParam(':id', $_GET['id'], 
     PDO::PARAM_STR);
-    $ajouter->bindParam(':id', $_GET['id'], 
+    $ajouter->bindParam(':iddd', $_GET['idd'], 
     PDO::PARAM_STR);
     $ajouter->bindParam(':dateun', $_GET['dateone'], 
     PDO::PARAM_STR);
@@ -257,16 +257,29 @@ if(isset($_GET['action']) && !empty($_GET['id']) && !empty($_GET['id'])  && !emp
     PDO::PARAM_STR);
    
     $estceok= $ajouter->execute();
-    //$ajouter->debugDumpParams();
-  
-        if($estceok){
-            echo 'votre enregistrement a été ajouté avec succés';
-            
+    if($estceok){
+        echo 'votre enregistrement a été ajouté avec succés';
         
-        } else {
-            echo 'Veuillez recommencer svp, une erreur est survenue';
-        }
+    
+    } else {
+        echo 'Veuillez recommencer svp, une erreur est survenue';
+    }
+    //$ajouter->debugDumpParams();      
 }
+$maj_vehicule=$db->prepare('UPDATE vehicule SET vehicule_dispo =0 WHERE id_vehicule=:idd');
+$maj_vehicule->bindParam(':idd', $_GET['idd'],
+PDO::PARAM_STR);
+$maj_vehicule->execute();
+
+$dispo = $db->prepare('SELECT * FROM vehicule WHERE  vehicule_dispo = 1');
+$dispo->execute();
+$dispo = $dispo->fetchAll(PDO::FETCH_ASSOC);
+
+foreach($dispo as $info){
+  echo "<br/>".$info['id_vehicule']."  immatriculation est : ".$info['immatriculation_voiture']." marque: ".$info['marque_vehicule']."<br/>";
+}
+
+ //joiture 
  
 $lister = $db->prepare('SELECT * FROM client
 INNER JOIN louer ON client.id_client = louer.id_client
@@ -278,12 +291,12 @@ $lister->execute();
 $lister = $lister->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($lister);
 //ON FAIT LA BOUCLE QUI AFFICHE TOUS LES RESULTATS
-foreach($lister as $info){
-   echo "<br/>".$info['nom_client']." a loué ".$info['marque_vehicule']." du ".$info['date_debut']." au ".$info['date_defin'];
-}
 
+foreach($lister as $info){
+    echo "<br/>"."<br/>".$info['nom_client']." a loué ".$info['marque_vehicule']." du ".$info['date_debut']." au ".$info['date_defin']."<br/>";
+ }
+ 
 
 ?>
-
 
 </html>
