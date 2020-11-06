@@ -149,7 +149,7 @@ if(isset($_GET['action']) && !empty($_GET['nom_cli']) && !empty($_GET['prenom_cl
      
 if(isset($_GET['action']) && !empty($_GET['immatriculation']) && !empty($_GET['marque_vehicule'])){
 
-$ajouter = $db->prepare('INSERT INTO vehicule (immatriculation_voiture, marque_vehicule,vehicule_dispo) VALUES (:plaque,:marque,1)');
+$ajouter = $db->prepare('INSERT INTO vehicule (immatriculation_voiture,marque_vehicule,vehicule_dispo) VALUES (:plaque,:marque,1)');
 $ajouter->bindParam(':plaque', $_GET['immatriculation'], 
 PDO::PARAM_STR);
 $ajouter->bindParam(':marque', $_GET['marque_vehicule'],
