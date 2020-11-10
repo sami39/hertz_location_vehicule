@@ -1,0 +1,661 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.connection h6{
+display: flex;
+    margin-top: 30px;
+    margin-left: 40px;
+    color:  #000000;
+    cursor: pointer;
+    font-size: 20px;
+    
+    }
+
+.header{
+  background-image: url("hertz/lexustest.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+
+.descend{
+  margin-bottom: 250px;
+}
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+.dropbtn {
+        background-color: #d7b80d;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+        background-color: #d7b80d;
+    }
+
+
+.titrevoiture h2{
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: px;
+    color:#ffd100;
+    -webkit-text-stroke: 1px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+    #marques{
+margin-top: 50px;
+    }
+
+    .imgfull{
+        margin-top: 30px;
+        text-align: center;
+    }
+.logo{
+    cursor: pointer;
+}
+
+.trait{
+    margin-top: 30px;
+    width: 320px;
+    height: 3px;
+     color:#ffd100;
+      background-color: #ffd100;
+        border-radius: 5px;
+}
+
+.trait2{
+  margin-top: 55px;
+}
+
+
+.navbar-form{
+  width: 250px;
+}
+
+.bouton{
+  margin-top: 100px;
+}
+
+
+.bouton5 {
+  margin-top: 40px;
+	border-radius:12px 0 12px 0;
+	background: #FFC312;
+	border: none;
+	color:#fff;
+	font:bold 15px Verdana;
+	padding: 10px 10px 10px 10px ;
+}
+
+.distance{
+  margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+#carouselfull {
+  margin-top: 150px;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .slide-image {
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: calc(100% + 400px);
+    height: calc(100% + 400px);
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .slide-title {
+    font-size: 4rem;
+    margin-top: -100px;
+    line-height: 1;
+    max-width: 50%;
+    white-space: normal;
+    word-break: break-word;
+    color: #FFF;
+    z-index: 100;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  
+.slide-title2 {
+  font-size: 4rem;
+  line-height: 1;
+  max-width: 50%;
+  white-space: normal;
+  word-break: break-word;
+  color: rgb(255, 255, 255);
+  z-index: 100;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 400px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 20px;
+  position: absolute;
+
+
+}
+  @media (min-width: 45em) {
+    .slide-title {
+      font-size: 7vw;
+      max-width: none;
+    }
+  }
+  .slide-title span {
+    white-space: pre;
+    display: inline-block;
+    opacity: 0;
+  }
+  
+  .slideshow {
+    position: relative;
+  }
+  .slideshow-pagination {
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: .3s opacity;
+    z-index: 10;
+  }
+  .slideshow-pagination-item {
+    display: flex;
+    align-items: center;
+  }
+  .slideshow-pagination-item .pagination-number {
+    opacity: 0.5;
+  }
+  .slideshow-pagination-item:hover, .slideshow-pagination-item:focus {
+    cursor: pointer;
+  }
+  .slideshow-pagination-item:last-of-type .pagination-separator {
+    width: 0;
+  }
+  .slideshow-pagination-item.active .pagination-number {
+    opacity: 1;
+  }
+  .slideshow-pagination-item.active .pagination-separator {
+    width: 10vw;
+  }
+  .slideshow-navigation-button {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 5rem;
+    z-index: 1000;
+    transition: all .3s ease;
+    color: #FFF;
+  }
+  .slideshow-navigation-button:hover, .slideshow-navigation-button:focus {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .slideshow-navigation-button.prev {
+    left: 0;
+  }
+  .slideshow-navigation-button.next {
+    right: 0;
+  }
+  
+  .pagination-number {
+    font-size: 1.8rem;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0.5rem;
+  }
+  
+  .pagination-separator {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    transition: all .3s ease;
+  }
+  @media (min-width: 45em) {
+    .pagination-separator {
+      display: block;
+    }
+  }
+  .pagination-separator-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    transform-origin: 0 0;
+  }
+  
+
+
+
+
+
+  .get-in-touch {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+  
+  }
+  .get-in-touch .title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3.2em;
+    line-height: 48px;
+    padding-bottom: 48px;
+       color: #FFC312;
+      background: #FFC312;
+      background: -moz-linear-gradient(left,#ff6600  0%,#FFC312 100%) !important;
+      background: -webkit-linear-gradient(left,#ff6600  0%,#FFC312 100%) !important;
+      background: linear-gradient(to right,#ff6600  0%,#FFC312  100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+  }
+  
+  .contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+  }
+  .contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #FFC312;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+  .contact-form .input-text:focus {
+    outline: none;
+  }
+  .contact-form .input-text:focus + .label,
+  .contact-form .input-text.not-empty + .label {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+  }
+  .contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #ff9900;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, 
+    -webkit-transform .2s ease-in-out;
+  }
+  .contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000;
+     background-image: linear-gradient(125deg,#ff6600,#FFC312);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width:220px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+
+
+  .example {
+    cursor: pointer;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    text-align:center;
+    }
+    .example .fadedbox {
+    background-color: #3b3b3b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 90%;
+    height: 100px;
+    padding: 130px 20px;
+    }
+    .example:hover .fadedbox { opacity: 0.9; }
+    .example .text {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    }
+    .example .title {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+    }
+    .example:hover .title,
+    .example:focus .title {
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    }
+
+    .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#1695fd
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#e48100
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+
+@media (max-width:1024px)
+{
+.logo{
+  width: 20px;
+}
+  .trait{
+    width: 100vw;
+    max-width: 1200px;
+    margin: auto;
+    margin-top:20px;
+  }
+#vehicule{
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+.header{
+  width: 100%;
+  height: auto;
+}
+#carouselfull{
+width: 100%;
+height: auto;
+}
+.descend{
+margin-top: 200px;
+}
+.example .fadedbox {
+  background-color: #3b3b3b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  opacity: 0;
+  width: 100%;
+  height: 100px;
+  padding: 130px 20px;
+  }
+}
+
+@media (max-width:600px)
+{
+  .example .fadedbox {
+    background-color: #3b3b3b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    width: 100%;
+    height: 100px;
+    padding: 130px 20px;
+    }
+}
